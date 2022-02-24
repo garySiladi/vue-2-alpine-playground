@@ -1,0 +1,48 @@
+{
+  "name": "vue-2-alpine",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "dev:all": "concurrently --kill-others \"yarn dev:parcel\" \"yarn dev\"",
+    "dev:parcel": "parcel public/alpine.js -d public/dist --no-source-maps",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "alpinejs": "^3.9.0",
+    "concurrently": "^7.0.0",
+    "core-js": "^3.8.3",
+    "parcel-bundler": "^1.12.5",
+    "vue": "^2.6.14"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.16",
+    "@babel/eslint-parser": "^7.12.16",
+    "@vue/cli-plugin-babel": "~5.0.0",
+    "@vue/cli-plugin-eslint": "~5.0.0",
+    "@vue/cli-service": "~5.0.0",
+    "eslint": "^7.32.0",
+    "eslint-plugin-vue": "^8.0.3",
+    "vue-template-compiler": "^2.6.14"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "@babel/eslint-parser"
+    },
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}
